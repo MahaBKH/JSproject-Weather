@@ -15,3 +15,26 @@ body {
     color: white;
 
 }
+.location, .temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.temperature{
+    flex-direction: column;
+}
+.temp-cf{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.temp-cf span{
+    margin: 10px;
+    font-size: 25px;
+}
+.temp-cf h2{
+    font-size: 40px
+}
