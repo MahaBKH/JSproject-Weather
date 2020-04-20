@@ -15,7 +15,7 @@ body {
     color: white;
 
 }
-.location, .temperature {
+.location, .temp-value {
     height: 30vh;
     width: 50%;
     display: flex;
@@ -23,7 +23,7 @@ body {
     align-items: center;
 
 }
-.temperature{
+.temp-value{
     flex-direction: column;
 }
 .temp-cf{
@@ -31,7 +31,7 @@ body {
     align-items: center;
     cursor: pointer;
 }
-.temp-cf span{
+.temp-value span{
     margin: 10px;
     font-size: 25px;
 }
