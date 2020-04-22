@@ -15,7 +15,6 @@ const KELVIN = 273;
 
 //API key
 const key = "ab40af0f0f91a3975145fd300671a768";
-//const key ="82005d27a116c2880c8fcb866998a0";
 //Check location 
 if ('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPostition, showError);
@@ -40,20 +39,6 @@ function showError(error){
 function getWeather(lat,long){
 let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
 
-fetch(api)
-.then (function(data){
-    weather.temprature.value = Math.floor(data.main.temprature - KELVIN);
-    weather.description = data.weather.description ;
-    weather.city =data.name;
-    weather.country = data.sys.country;
-})
-.then(function(){
-    displayWeather();
+console.log(api);
+};
 
-});
-function displayWeather(){
-    iconElement.innerHTML = `img src ="icons/${weather.iconId}.png"/>`;
-    tempElement.innerHTML = `${weather.temp.value}<span>c</span>`;
-    descElement.innerHTML= `${weather.city}, ${weather.country}`;
-}
-}
